@@ -67,7 +67,7 @@ const App = () => {
     }
   }
 
-  const mod = () => {
+  const handleModNumbers = () => {
     if (firstNumber === '0'){
       setFirstNumber(String(currentNumber));
       setCurrentNumber('0');
@@ -79,6 +79,14 @@ const App = () => {
     }
   }
 
+  const handlePowNumbers = () => {
+    if (firstNumber !== '0') {
+      setFirstNumber(String(currentNumber));
+      const pow = Number(currentNumber)*Number(currentNumber);
+      setCurrentNumber(String(pow));
+    }
+  }
+  
   const handleEquals = () => {
     if (firstNumber !== '0' && operation !== '' && currentNumber !== '0') {
       switch (operation) {
@@ -95,7 +103,10 @@ const App = () => {
           handleMultNumbers();
           break;
         case '%':
-          mod();
+          handleModNumbers();
+          break;
+        case '²':
+          handlePowNumbers();
           break;
         default:
 
@@ -110,7 +121,7 @@ const App = () => {
         <Input value={currentNumber} />
         <Row>
           <Button label='C' onClick={handleOnClear} />
-          <Button label='²' onClick={() => handleAddNumber('')} />
+          <Button label='²' onClick={handlePowNumbers} />
           <Button label='/' onClick={handleDivNumbers} />
           <Button label='x' onClick={handleMultNumbers} />
         </Row>
@@ -134,7 +145,7 @@ const App = () => {
         </Row>
         <Row>
           <Button label='0' onClick={() => handleAddNumber('0')} />
-          <Button label='%' onClick={mod} />
+          <Button label='%' onClick={handleModNumbers} />
           <Button label='=' onClick={handleEquals} />
         </Row>
       </Content>

@@ -61,8 +61,20 @@ const App = () => {
       setCurrentNumber('0');
       setOperation('x');
     } else {
-      const division = Number(firstNumber) * Number(currentNumber);
-      setCurrentNumber(String(division));
+      const multiplication = Number(firstNumber) * Number(currentNumber);
+      setCurrentNumber(String(multiplication));
+      setOperation('');
+    }
+  }
+
+  const mod = () => {
+    if (firstNumber === '0'){
+      setFirstNumber(String(currentNumber));
+      setCurrentNumber('0');
+      setOperation('%');
+    } else {
+      const module = Number(firstNumber) % Number(currentNumber);
+      setCurrentNumber(String(module));
       setOperation('');
     }
   }
@@ -81,6 +93,9 @@ const App = () => {
           break;
         case 'x':
           handleMultNumbers();
+          break;
+        case '%':
+          mod();
           break;
         default:
 
@@ -119,7 +134,7 @@ const App = () => {
         </Row>
         <Row>
           <Button label='0' onClick={() => handleAddNumber('0')} />
-          <Button label='%' onClick={() => handleAddNumber('')} />
+          <Button label='%' onClick={mod} />
           <Button label='=' onClick={handleEquals} />
         </Row>
       </Content>

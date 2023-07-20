@@ -4,15 +4,15 @@ export const InputContainer = styled.div`
   width: 100%;
   height: 75px;
   background-color: #aaaaff;
-
   display: flex;
+  margin: 16px 0;
   align-items: center;
   justify-content: flex-end;
   
   font-size: 24px;
   font-family: "Roboto";
   border-radius: 16px;
-
+  
   input {
     width: 100%;
     height: 75px;

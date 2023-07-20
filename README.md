@@ -36,7 +36,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 
 
-O Projeto da calculadora, serve para realizar operações matemáticas cotidianas, como adição, subtração, divisão e multiplicação.
+O Projeto da calculadora, serve para realizar operações matemáticas cotidianas, como adição, subtração, divisão, multiplicação, cálculo do mod e potência ao quadrado.
 
 <!--[Acesse o projeto em andamento, online](https://Gustavo-Zamai.github.io/Pokedex)-->
 
@@ -52,7 +52,8 @@ Esse projeto não teve layout disponibilizado previamente, ele foi desenvolvido 
 
 ## 📑 Aprendizado
 
-
+Durante o desenvolvimento desse projeto, foi reforçado conceitos de componentes, estado, funções e raciocínio logico nas regras da calculadora.</br>
+Pude perceber que o desenvolvimento usando React é muito mais rápido e até mesmo intuitivo.
 
 ---
 ## 📝 Licença
@@ -61,6 +62,5 @@ Esse projeto não teve layout disponibilizado previamente, ele foi desenvolvido 
 Esse projeto está sob a licença MIT.
 
 ---
-
 
 Feito com ♥ por Gustavo Zamai

@@ -55,6 +55,18 @@ const App = () => {
     }
   }
 
+  const handleMultNumbers = () => {
+    if (firstNumber === '0') {
+      setFirstNumber(String(currentNumber));
+      setCurrentNumber('0');
+      setOperation('x');
+    } else {
+      const division = Number(firstNumber) * Number(currentNumber);
+      setCurrentNumber(String(division));
+      setOperation('');
+    }
+  }
+
   const handleEquals = () => {
     if (firstNumber !== '0' && operation !== '' && currentNumber !== '0') {
       switch (operation) {
@@ -66,6 +78,9 @@ const App = () => {
           break;
         case '/':
           handleDivNumbers();
+          break;
+        case 'x':
+          handleMultNumbers();
           break;
         default:
 
@@ -82,7 +97,7 @@ const App = () => {
           <Button label='C' onClick={handleOnClear} />
           <Button label='²' onClick={() => handleAddNumber('')} />
           <Button label='/' onClick={handleDivNumbers} />
-          <Button label='X' onClick={() => handleAddNumber('')} />
+          <Button label='x' onClick={handleMultNumbers} />
         </Row>
         <Row>
           <Button label='7' onClick={() => handleAddNumber('7')} />
